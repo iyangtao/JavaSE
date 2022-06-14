@@ -1,0 +1,8 @@
+.mvn
+.idea
+JavaSE.iml
+.gitignore
+
+*.target
+
+*..gitignore
