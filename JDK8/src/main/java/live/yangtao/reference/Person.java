@@ -1,10 +1,17 @@
 package live.yangtao.reference;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * @author yangtao
  * @description
  * @create 2022-06-18 2:29
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Person {
 
     private String name;
@@ -17,38 +24,12 @@ public class Person {
         return age + 1;
     }
 
-    public Person() {
-    }
-
-    public Person(String name, Integer age, String id) {
-        this.name = name;
-        this.age = age;
-        this.id = id;
-    }
-
     public Integer ageDiff(Person p) {
         return Math.abs(p.getAge() - this.getAge());
     }
 
     public Person(String name) {
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", id='" + id + '\'' +
-                '}';
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -59,11 +40,19 @@ public class Person {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public Integer getAge(Person person) {
         return age;
     }
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
