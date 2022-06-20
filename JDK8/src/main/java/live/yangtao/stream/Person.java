@@ -19,14 +19,18 @@ public class Person {
 
     private String no;
     private String name;
-    private Integer age;
+    private int age;
     private List<String> hobbies;
-    private Integer rank;
+    private int rank;
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Person person = (Person) o;
         return no.equals(person.no);
     }
